@@ -2,10 +2,6 @@ package com.gohardvpn.plus.handler
 
 import com.gohardvpn.plus.AppConfig
 import com.gohardvpn.plus.dto.ProfileItem
-import com.gohardvpn.plus.enums.EConfigType
-import com.gohardvpn.plus.util.Utils
-import org.json.JSONArray
-import org.json.JSONObject
 
 object PayloadManager {
     private const val PREF_PAYLOAD_ENABLED = "pref_payload_enabled"

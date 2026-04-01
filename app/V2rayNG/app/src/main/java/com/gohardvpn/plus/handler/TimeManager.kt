@@ -61,7 +61,7 @@ object TimeManager {
     }
 
     fun getActiveDays(): Set<Int> {
-        val daysStr = MmkvManager.decodeSettingsString(PREF_TIME_MANAGER_DAYS) ?: "1,2,3,4,5"
+        val daysStr = MmkvManager.decodeSettingsString(PREF_TIME_MANAGER_DAYS) ?: "2,3,4,5,6"
         return daysStr.split(",").mapNotNull { it.toIntOrNull() }.toSet()
     }
 
