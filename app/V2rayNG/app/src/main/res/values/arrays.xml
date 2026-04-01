@@ -69,6 +69,42 @@
         <item>1-5</item>
     </string-array>
 
+    <string-array name="payload_templates" translatable="false">
+        <item>None</item>
+        <item>HTTP Standard</item>
+        <item>HTTP + Keep-Alive</item>
+        <item>HTTP + X-Online-Host</item>
+        <item>HTTP + Split</item>
+        <item>SSL/TLS Direct</item>
+        <item>SSL + SNI</item>
+        <item>Custom</item>
+    </string-array>
+
+    <string-array name="payload_templates_value" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+
+    <string-array name="time_manager_days" translatable="false">
+        <item>All days</item>
+        <item>Weekdays (Mon-Fri)</item>
+        <item>Weekend (Sat-Sun)</item>
+        <item>Custom</item>
+    </string-array>
+
+    <string-array name="time_manager_days_value" translatable="false">
+        <item>1,2,3,4,5,6,7</item>
+        <item>1,2,3,4,5</item>
+        <item>6,7</item>
+        <item>1,2,3,4,5,6,7</item>
+    </string-array>
+
     <string-array name="streamsecurity_utls" translatable="false">
         <item />
         <item>chrome</item>

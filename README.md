@@ -23,13 +23,26 @@ A full-featured Android VPN app based on V2RayNG, enhanced with:
 - Day 7: Final delivery
 
 ## Status
-- [ ] Day 1: Extract & Setup
-- [ ] Day 2: Import Servers
-- [ ] Day 3: SSH Tunneling
-- [ ] Day 4: Payload Injector
-- [ ] Day 5: Config Export + Time Manager
-- [ ] Day 6: Polish & Bug Fixes
-- [ ] Day 7: Final Delivery
+- [x] Day 1: Extract & Setup ✅
+- [x] Day 2: Rebranding (package, app name, imports) ✅
+- [x] Day 3: SSH Tunneling ✅
+- [x] Day 4: Payload Injector ✅
+- [x] Day 5: Config Export + Time Manager ✅
+- [x] Day 6: Polish & Bug Fixes ✅
+- [ ] Day 7: Final Delivery (build APK)
+
+## Build Instructions
+```bash
+cd app/V2rayNG
+./gradlew assembleDebug
+```
+APK will be in: `app/build/outputs/apk/debug/`
+
+## Features Added
+- SSH server support
+- HTTP/SSL payload injector with presets
+- Time Manager for scheduled connections
+- Rebranded from v2rayNG to GoHardVPN-Plus
 
 ## Project Structure
 ```

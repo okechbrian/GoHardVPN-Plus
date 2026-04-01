@@ -246,6 +246,55 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:title="@string/title_payload_settings"
+        app:initialExpandedChildrenCount="0">
+        <CheckBoxPreference
+            android:key="pref_payload_enabled"
+            android:summary="@string/summary_pref_payload_enabled"
+            android:title="@string/title_pref_payload_enabled" />
+
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/payload_templates"
+            android:entryValues="@array/payload_templates_value"
+            android:key="pref_payload_template"
+            android:summary="%s"
+            android:title="@string/title_pref_payload_template" />
+
+        <EditTextPreference
+            android:key="pref_payload_custom"
+            android:summary="@string/summary_pref_payload_custom"
+            android:title="@string/title_pref_payload_custom" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/title_time_manager"
+        app:initialExpandedChildrenCount="0">
+        <CheckBoxPreference
+            android:key="pref_time_manager_enabled"
+            android:summary="@string/summary_pref_time_manager_enabled"
+            android:title="@string/title_pref_time_manager_enabled" />
+
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/time_manager_days"
+            android:entryValues="@array/time_manager_days_value"
+            android:key="pref_time_manager_days"
+            android:summary="%s"
+            android:title="@string/title_pref_time_manager_days" />
+
+        <EditTextPreference
+            android:key="pref_time_manager_start"
+            android:summary="08:00"
+            android:title="@string/title_pref_time_manager_start" />
+
+        <EditTextPreference
+            android:key="pref_time_manager_end"
+            android:summary="18:00"
+            android:title="@string/title_pref_time_manager_end" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:title="@string/title_sub_setting"
         app:initialExpandedChildrenCount="0">
         <CheckBoxPreference

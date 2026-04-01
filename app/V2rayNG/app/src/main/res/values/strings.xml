@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">v2rayNG</string>
+    <string name="app_name" translatable="false">GoHardVPN-Plus</string>
     <string name="app_widget_name">Switch</string>
     <string name="app_tile_name">Switch</string>
     <string name="app_tile_first_use">First use of this feature, please use the app to add server</string>
@@ -39,6 +39,7 @@
     <string name="menu_item_import_config_manually_trojan">Add [Trojan]</string>
     <string name="menu_item_import_config_manually_wireguard">Add [Wireguard]</string>
     <string name="menu_item_import_config_manually_hysteria2">Add [Hysteria2]</string>
+    <string name="menu_item_import_config_manually_ssh">Add [SSH]</string>
     <string name="del_config_comfirm">Confirm delete ?</string>
     <string name="del_invalid_config_comfirm">Please test before deleting! Confirm delete ?</string>
     <string name="server_lab_remarks">remarks</string>
@@ -351,6 +352,21 @@
     <string name="title_pref_fragment_length">Fragment Length (min-max)</string>
     <string name="title_pref_fragment_interval">Fragment Interval (min-max)</string>
     <string name="title_pref_fragment_enabled">Enable Fragment</string>
+
+    <string name="title_payload_settings">Payload Settings</string>
+    <string name="title_pref_payload_enabled">Enable Payload Injection</string>
+    <string name="summary_pref_payload_enabled">Enable HTTP/SSL payload injection for DPI bypass</string>
+    <string name="title_pref_payload_template">Payload Template</string>
+    <string name="summary_pref_payload_template">Select a preset payload or create custom</string>
+    <string name="title_pref_payload_custom">Custom Payload</string>
+    <string name="summary_pref_payload_custom">Enter custom payload (use [crlf] for newlines)</string>
+
+    <string name="title_time_manager">Time Manager</string>
+    <string name="title_pref_time_manager_enabled">Enable Time Manager</string>
+    <string name="summary_pref_time_manager_enabled">Auto connect/disconnect VPN at scheduled times</string>
+    <string name="title_pref_time_manager_days">Active Days</string>
+    <string name="title_pref_time_manager_start">Start Time</string>
+    <string name="title_pref_time_manager_end">End Time</string>
 
     <string name="update_check_for_update">Check for update</string>
     <string name="update_already_latest_version">Already on the latest version</string>

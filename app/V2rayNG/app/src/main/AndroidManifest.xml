@@ -210,6 +210,11 @@
             </intent-filter>
         </receiver>
 
+        <receiver
+            android:name=".receiver.TimeActionReceiver"
+            android:exported="false"
+            android:label="TimeActionReceiver" />
+
         <service
             android:name=".service.QSTileService"
             android:exported="true"
