@@ -48,7 +48,7 @@ object SshFmt : FmtBase() {
     }
 
     fun toOutbound(profileItem: ProfileItem): OutboundBean? {
-        val outboundBean = V2rayConfigManager.createInitOutbound(EConfigType.SOCKS)
+        val outboundBean = V2rayConfigManager.createInitOutbound(EConfigType.SSH)
 
         outboundBean?.settings?.servers?.first()?.let { server ->
             server.address = getServerAddress(profileItem)

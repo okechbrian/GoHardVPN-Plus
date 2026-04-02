@@ -1121,7 +1121,8 @@ object V2rayConfigManager {
             EConfigType.SHADOWSOCKS,
             EConfigType.SOCKS,
             EConfigType.HTTP,
-            EConfigType.TROJAN ->
+            EConfigType.TROJAN,
+            EConfigType.SSH ->
                 return OutboundBean(
                     protocol = configType.name.lowercase(),
                     settings = OutSettingsBean(

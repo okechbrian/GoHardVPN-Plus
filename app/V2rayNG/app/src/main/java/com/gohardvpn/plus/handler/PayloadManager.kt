@@ -80,18 +80,27 @@ object PayloadManager {
     fun applyPayloadToProfile(profileItem: ProfileItem, host: String? = null): ProfileItem {
         if (!isPayloadEnabled()) return profileItem
 
+        val targetHost = host ?: profileItem.host ?: profileItem.server ?: ""
         val index = getSelectedPayloadIndex()
+
         if (index >= 0 && index < defaultPayloads.size) {
+            // Use a built-in template
             val template = defaultPayloads[index]
-            val targetHost = host ?: profileItem.host ?: profileItem.server ?: ""
-            
             if (template.payload.isNotEmpty()) {
                 profileItem.headerType = AppConfig.HEADER_TYPE_HTTP
-                val generatedPayload = generatePayload(template, targetHost)
-                profileItem.path = generatedPayload
+                profileItem.path = generatePayload(template, targetHost)
+            }
+        } else {
+            // Fall back to custom payload when index is out of range (i.e. "Custom" option selected)
+            val custom = getCustomPayload()
+            if (custom.isNotEmpty()) {
+                profileItem.headerType = AppConfig.HEADER_TYPE_HTTP
+                profileItem.path = custom
+                    .replace("{host}", targetHost)
+                    .replace("[crlf]", "\r\n")
             }
         }
-        
+
         return profileItem
     }
 

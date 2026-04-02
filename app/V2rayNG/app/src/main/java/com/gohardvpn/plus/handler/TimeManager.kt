@@ -119,7 +119,7 @@ object TimeManager {
         isStart: Boolean
     ) {
         val intent = Intent(context, TimeActionReceiver::class.java).apply {
-            action = if (isStart) AppConfig.BROADCAST_ACTION_SERVICE else AppConfig.BROADCAST_ACTION_SERVICE
+            action = if (isStart) "com.gohardvpn.plus.action.TIME_START" else "com.gohardvpn.plus.action.TIME_STOP"
             putExtra("action", if (isStart) "start" else "stop")
         }
 
