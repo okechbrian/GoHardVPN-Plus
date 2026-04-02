@@ -36,6 +36,7 @@ object SshFmt : FmtBase() {
     }
 
     fun toUri(config: ProfileItem): String {
+        val remarks = config.remarks ?: ""
         val pw =
             if (config.username.isNotNullEmpty() && config.password.isNotNullEmpty())
                 "${config.username}:${config.password}"
@@ -44,7 +45,7 @@ object SshFmt : FmtBase() {
             else
                 ":"
 
-        return "${AppConfig.SSH}${Utils.encode(pw, true)}@${config.server}:${config.serverPort}#${Utils.encode(config.remarks)}"
+        return "${AppConfig.SSH}${Utils.encode(pw, true)}@${config.server}:${config.serverPort}#${Utils.encode(remarks)}"
     }
 
     fun toOutbound(profileItem: ProfileItem): OutboundBean? {

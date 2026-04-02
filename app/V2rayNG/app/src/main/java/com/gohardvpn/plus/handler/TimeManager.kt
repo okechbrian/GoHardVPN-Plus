@@ -6,6 +6,8 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import com.gohardvpn.plus.AppConfig
+import com.gohardvpn.plus.AngApplication
+import com.gohardvpn.plus.receiver.TimeActionReceiver
 import java.util.Calendar
 
 object TimeManager {
