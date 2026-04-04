@@ -37,13 +37,13 @@ object SshFmt : FmtBase() {
 
     fun toUri(config: ProfileItem): String {
         val remarks = config.remarks ?: ""
-        val pw =
-            if (config.username.isNotNullEmpty() && config.password.isNotNullEmpty())
-                "${config.username}:${config.password}"
-            else if (config.username.isNotNullEmpty())
-                config.username
-            else
-                ":"
+        val pw: String = if (config.username.isNotNullEmpty() && config.password.isNotNullEmpty()) {
+            "${config.username}:${config.password}"
+        } else if (config.username.isNotNullEmpty()) {
+            config.username!!
+        } else {
+            ":"
+        }
 
         return "${AppConfig.SSH}${Utils.encode(pw, true)}@${config.server}:${config.serverPort}#${Utils.encode(remarks)}"
     }
